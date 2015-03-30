@@ -169,7 +169,7 @@ class GRAV_GIT_DEPLOY
 			}
 			else
 			{
-				echo '<br>'.date('m-d-y g:i:sa').' - '.$data;
+				echo (!empty($_SERVER['HTTP_X_HUB_SIGNATURE']) ? "\n" : '<br>').date('m-d-y g:i:sa').' - '.$data;
 			}
 		}
 	}

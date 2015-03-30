@@ -3,14 +3,14 @@ PHP Script to call on Git Hooks
 
 
 Usage
-  
+
 ```
   <?php
-  
+
   include('gitdeploy.php');
 
   $deploy = new GRAV_GIT_DEPLOY();
-  $deploy->allow_direct_access = true; // Change this to false when running from GitHub.  Set to true only to test from the browser.
+  $deploy->allow_browser_access = true; // Change this to false when running from GitHub.  Set to true only for Testing.
   $deploy->secret = 'XXXXXXXXXXXXX';
   $deploy->remote = 'origin';
   $deploy->branch = 'master';
