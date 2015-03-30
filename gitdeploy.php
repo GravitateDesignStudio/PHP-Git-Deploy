@@ -10,9 +10,9 @@ class GRAV_GIT_DEPLOY
 {
 	// setting this to false will REQUIRE that the call needs to originate and verify from github.
 	// This requires you to set the Secret in the GitHub Webhook.
-	var $allow_direct_access = false;
+	var $allow_browser_access = false;
 
-	// secret key either in the GitHub Webhook or in the $_GET['secret'] if $allow_direct_access is set to false.
+	// secret key either in the GitHub Webhook or in the $_GET['secret'] if $allow_browser_access is set to false.
 	// make sure it is url safe. Ex no & or = etc.
 	var $secret = '';
 
@@ -77,7 +77,7 @@ class GRAV_GIT_DEPLOY
 		}
 		else if(!empty($_GET['secret']) && $_GET['secret'] === $this->secret)
 		{
-			if($this->allow_direct_access)
+			if($this->allow_browser_access)
 			{
 				$is_secure = true;
 				$this->log('Call was secure');
@@ -177,7 +177,7 @@ class GRAV_GIT_DEPLOY
 
 /* Usage
 $deploy = new GRAV_GIT_DEPLOY();
-$deploy->allow_direct_access = true; // Change this to false when running from GitHub.  Set to true only to test from the browser.
+$deploy->allow_browser_access = true; // Change this to false when running from GitHub.  Set to true only to test from the browser.
 $deploy->secret = 'XXXXXXXXXXXXX'; // GitHub Secret Key or $_GET['secret'] if running from the browser.
 $deploy->remote = 'origin';
 $deploy->branch = 'master';
