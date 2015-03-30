@@ -1,5 +1,11 @@
 <?php
 
+/*
+*
+*	SEE USAGE OR Change Settings at the bottom of the page.
+*
+*/
+
 class GRAV_GIT_DEPLOY
 {
 	// setting this to false will REQUIRE that the call needs to originate and verify from github.
