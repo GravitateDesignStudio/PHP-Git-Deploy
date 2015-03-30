@@ -4,6 +4,7 @@ PHP Script to call on Git Hooks
 
 Usage
   
+```
   <?php
   
   include('gitdeploy.php');
@@ -16,3 +17,5 @@ Usage
   $deploy->debug = true; // Remove this line or change to false after Successful Pushes.  This can be set to a file to keep a log.
   $deploy->dry_run = true; // Remove this line or change to false after Testing is complete.
   $deploy->run();
+
+```
