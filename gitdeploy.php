@@ -177,7 +177,7 @@ class GRAV_GIT_DEPLOY
 
 /* Usage */
 $deploy = new GRAV_GIT_DEPLOY();
-$deploy->allow_direct_access = true;
+$deploy->allow_direct_access = true; // Change this to false when running from GitHub.  Set to true only to test from the browser.
 $deploy->secret = 'XXXXXXXXXXXXX';
 $deploy->remote = 'origin';
 $deploy->branch = 'master';
