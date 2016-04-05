@@ -9,7 +9,7 @@ Usage
 
   include('gitdeploy.php');
 
-  $gitdeploy = new GRAV_GIT_DEPLOY();
+  $gitdeploy = new GIT_DEPLOY();
   $gitdeploy->allow_browser_access = true; // Change this to false when running from GitHub.  Set to true only for Testing.
   $gitdeploy->secret = 'XXXXXXXXXXXXX'; // GitHub Secret Key or $_GET['secret'] if running from the browser.
   $gitdeploy->remote = 'origin';
