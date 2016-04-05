@@ -1,4 +1,4 @@
-# Gravitate-Git-Deploy
+# Git-Deploy
 PHP Script to call on Git Hooks
 
 
