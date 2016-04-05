@@ -6,7 +6,7 @@
 *
 */
 
-class GRAV_GIT_DEPLOY
+class GIT_DEPLOY
 {
 	// setting this to false will REQUIRE that the call needs to originate and verify from github.
 	// This requires you to set the Secret in the GitHub Webhook.
@@ -176,7 +176,7 @@ class GRAV_GIT_DEPLOY
 }
 
 /* Usage
-$gitdeploy = new GRAV_GIT_DEPLOY();
+$gitdeploy = new GIT_DEPLOY();
 $gitdeploy->allow_browser_access = true; // Change this to false when running from GitHub.  Set to true only to test from the browser.
 $gitdeploy->secret = 'XXXXXXXXXXXXX'; // GitHub Secret Key or $_GET['secret'] if running from the browser.
 $gitdeploy->remote = 'origin';
